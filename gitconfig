@@ -1,0 +1,26 @@
+[user]
+	name = James Golick
+	email = james@giraffesoft.ca
+[alias]
+	co = checkout
+[apply]
+	whitespace = nowarn
+[core]
+	excludesfile = /Users/james/.gitignore
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
