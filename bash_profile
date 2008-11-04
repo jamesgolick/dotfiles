@@ -51,7 +51,7 @@ rp()
   autotest
 }
 
-source ~/script/git-completion.bash
+source ~/.bash/completion/git-completion.bash
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
 export GEMDIR=`gem env gemdir`

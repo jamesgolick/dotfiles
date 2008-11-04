@@ -10,6 +10,7 @@ function relink() {
 cd ..
  
 relink .bash_profile etc/bash_profile
+relink .bash	     etc/bash
  
 relink .vim          etc/vim
 relink .vimrc        etc/vimrc
