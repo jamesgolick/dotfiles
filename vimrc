@@ -61,3 +61,4 @@ vmap <leader>a :Align : =><CR>
 nmap <leader>v :vsplit<CR> <C-w><C-w>
 nmap <leader>s :split<CR> <C-w><C-w>
 
+:colorscheme vividchalk 
