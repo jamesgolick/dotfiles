@@ -38,14 +38,6 @@ au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/plugin/yaml.vim
 " Make it way easier to switch windows (<leader>w)
 nmap <leader>w <C-w><C-w>_
 
-" Automatic double quoting a la textmate
-inoremap (( ()<Esc>i
-inoremap [[ []<Esc>i
-inoremap {{ {}<Esc>i
-inoremap '' ''<Esc>i
-inoremap "" ""<Esc>i
-inoremap `` ``<Esc>i
-
 " search next/previous -- center in page
 nmap n nzz
 nmap N Nzz
