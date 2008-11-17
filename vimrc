@@ -16,6 +16,7 @@ set smarttab
 set number
 imap <C-l> <space>=><space>
 map <leader>t :FuzzyFinderTextMate<CR>
+let g:fuzzy_matching_limit=60
 set go-=T
 
 " MacVim appearance settings
@@ -38,13 +39,8 @@ au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/plugin/yaml.vim
 " Make it way easier to switch windows (<leader>w)
 nmap <leader>w <C-w><C-w>_
 
-" Automatic double quoting a la textmate
-inoremap (( ()<Esc>i
-inoremap [[ []<Esc>i
-inoremap {{ {}<Esc>i
-inoremap '' ''<Esc>i
-inoremap "" ""<Esc>i
-inoremap `` ``<Esc>i
+" jump out of brackets or quotes
+imap <C-o> <Esc>la
 
 " search next/previous -- center in page
 nmap n nzz
