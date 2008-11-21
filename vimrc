@@ -16,6 +16,7 @@ set smarttab
 set number
 imap <C-l> <space>=><space>
 map <leader>t :FuzzyFinderTextMate<CR>
+let g:fuzzy_matching_limit=60
 set go-=T
 
 " MacVim appearance settings
@@ -38,6 +39,9 @@ au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/plugin/yaml.vim
 " Make it way easier to switch windows (<leader>w)
 nmap <leader>w <C-w><C-w>_
 
+" jump out of brackets or quotes
+imap <C-o> <Esc>la
+
 " search next/previous -- center in page
 nmap n nzz
 nmap N Nzz
@@ -52,5 +56,8 @@ vmap <leader>a :Align : =><CR>
 " window splitting mappings
 nmap <leader>v :vsplit<CR> <C-w><C-w>
 nmap <leader>s :split<CR> <C-w><C-w>
+
+" nerd tree
+map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 
 :colorscheme vividchalk 
