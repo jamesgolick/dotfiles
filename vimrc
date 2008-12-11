@@ -7,6 +7,8 @@ augroup myfiletypes
   autocmd!
   " autoindent with two spaces, always expand tabs
   autocmd FileType ruby,haml,eruby,yaml set ai sw=2 sts=2 et
+  autocmd BufNewFile,BufRead *.json_builder setf ruby
+  autocmd BufNewFile,BufRead *.red setf ruby
 augroup END
 set ai
 set sts=2
@@ -15,8 +17,18 @@ set autoindent
 set smarttab
 set number
 imap <C-l> <space>=><space>
+
 map <leader>t :FuzzyFinderTextMate<CR>
 let g:fuzzy_matching_limit=60
+let g:fuzzy_ceiling=20000
+
+" Configuration option: g:fuzzy_ignore
+" A delimited list of file glob patterns to ignore. Entries may be delimited
+" with either commas or semi-colons.
+if !exists('g:fuzzy_ignore')
+  let g:fuzzy_ignore = "vendor/**/*.rb"
+endif
+
 set go-=T
 
 " MacVim appearance settings
@@ -28,7 +40,8 @@ endif
 " Map \r to run current file with ruby, and \rf to run test by current word
 nmap <leader>r :!ruby %<CR>
 nmap <leader>rs :Scratch 'ruby ' . expand('%')<CR>
-nmap <leader>rf :Execruby expand('%') . " --name='/" . RubyTestName() . "/'"<CR>
+nmap <leader>rf :Execruby expand('%') . " --name='/" . RubyShouldName() . "/'"<CR>
+nmap <leader>rc :Execruby expand('%') . " --name='/" . RubyContextName() . "/'"<CR>
 
 " Make a new line, and then jump back to ctrl mode
 nmap <leader>o o<Esc>
