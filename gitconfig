@@ -24,3 +24,6 @@
   added = yellow
   changed = green
   untracked = cyan
+[github]
+  user = giraffesoft
+  token = dbfb6db7ec9c484f80477dad6d424591
