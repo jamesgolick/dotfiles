@@ -74,3 +74,5 @@ nmap <leader>s :split<CR> <C-w><C-w>
 map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 
 :colorscheme vividchalk 
+
+set wildmenu
