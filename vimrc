@@ -76,3 +76,18 @@ map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 :colorscheme vividchalk 
 
 set wildmenu
+set incsearch
+set hls
+
+map ; :nohlsearch<CR>
+
+" remap motions to the ones from the camelcase motions plugin so that w b and
+" e motions don't suck so bad
+"
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e 
+
+let &t_SI = "\<Esc>]14;purple\x7"
+let &t_EI = "\<Esc>]12;blue\x7"
+
