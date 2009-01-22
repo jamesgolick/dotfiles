@@ -1,4 +1,4 @@
-export PATH=~/script:/usr/local/bin:/usr/local/mysql/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH:/usr/local/jruby/bin:/usr/local/ec2-api-tools/bin
+export PATH=~/script:/usr/local/bin:/usr/local/mysql/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH:/usr/local/jruby/bin:/usr/local/ec2-api-tools/bin:/usr/local/screenwm-1.0:~
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 export CDPATH=.:~:~/Documents:~/Documents/railsApps:/Library/Ruby/Gems/1.8/gems/
 export HISTIGNORE="&:mutt:[bf]g:exit"
@@ -30,7 +30,11 @@ alias grm='git rm'
 alias gc='git commit'
 alias gmv='git mv'
 alias gd='git diff'
-alias git_remove_missing_files="gs | awk '/deleted:(.*)/ {print $3}' | xargs git rm"
+
+function git_remove_missing_files() {
+  gs | awk '/deleted:(.*)/ {print $3}' | xargs git rm
+}
+
 alias gcm='git commit -m'
 alias gp='git push'
 alias gpcd='git push && cap deploy'
@@ -51,6 +55,12 @@ rp()
   thin start -d
   autotest
 }
+
+#from jonathan
+function ftf () {
+  find "${@:-"."}" $FIND_OPTIONS -type f -print
+}
+export -f ftf
 
 source ~/.bash/completion/git-completion.bash
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
