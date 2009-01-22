@@ -88,6 +88,9 @@ map <silent> w <Plug>CamelCaseMotion_w
 map <silent> b <Plug>CamelCaseMotion_b
 map <silent> e <Plug>CamelCaseMotion_e 
 
+" map ^ to H
+map H ^
+
 let &t_SI = "\<Esc>]14;purple\x7"
 let &t_EI = "\<Esc>]12;blue\x7"
 
