@@ -17,4 +17,5 @@ relink .vimrc        etc/vimrc
  
 relink .gitconfig    etc/gitconfig
 relink .gitignore    etc/gitignore
+relink .screenrc     etc/screenrc
 
