@@ -4,6 +4,7 @@ export CDPATH=.:~:~/Documents:~/Documents/railsApps:/Library/Ruby/Gems/1.8/gems/
 export HISTIGNORE="&:mutt:[bf]g:exit"
 export HISTSIZE=10000
 shopt -s histappend
+export TERM=xterm-256color
 
 # EC2
 export EC2_INSTALLATION=giraffesoft
