@@ -24,6 +24,12 @@ alias srm='svn rm'
 alias sup='svn up'
 alias smkdir='svn mkdir'
 
+# vim stuff
+
+function vack() {
+  ack $1 | vi -c"set buftype=nofile" -
+}
+
 # GIT
 alias gs='git status'
 alias ga='git add'
