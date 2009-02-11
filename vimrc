@@ -7,6 +7,7 @@ augroup myfiletypes
   autocmd!
   " autoindent with two spaces, always expand tabs
   autocmd FileType ruby,haml,eruby,yaml set ai sw=2 sts=2 et
+  autocmd FileType javascript set nosmarttab indentexpr=
   autocmd BufNewFile,BufRead *.json_builder setf ruby
   autocmd BufNewFile,BufRead *.red setf ruby
 augroup END
