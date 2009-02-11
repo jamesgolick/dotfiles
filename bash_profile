@@ -30,6 +30,10 @@ function vack() {
   ack $1 | vi -c"set buftype=nofile" -
 }
 
+function vri() {
+  ri $1 | vi -c"set buftype=nofile" -
+}
+
 # GIT
 alias gs='git status'
 alias ga='git add'
