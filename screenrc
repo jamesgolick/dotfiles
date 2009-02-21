@@ -18,3 +18,6 @@ shell -$SHELL
 # status line
 hardstatus alwayslastline "%{=b}%{G}%w %=[%Y-%m-%d -- %c]"
 
+screen -t vim vim .
+screen -t bash
+
