@@ -67,6 +67,11 @@ rp()
   autotest
 }
 
+# source all files in .bash/aliases
+for file in $HOME/.bash/aliases/*.bash; do
+  source $file
+done
+
 #from jonathan
 function ftf () {
   find "${@:-"."}" $FIND_OPTIONS -type f -print
