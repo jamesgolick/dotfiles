@@ -16,16 +16,6 @@ export EDITOR='vim'
 export CLICOLOR=1
 alias e=vim
 
-# vim stuff
-
-function vack() {
-  ack $1 | vi -c"set buftype=nofile" -
-}
-
-function vri() {
-  ri $1 | vi -c"set buftype=nofile" -
-}
-
 # other
 alias ka='killall -9'
 
