@@ -16,14 +16,6 @@ export EDITOR='vim'
 export CLICOLOR=1
 alias e=vim
 
-# SVN 
-alias ss='svn status'
-alias smv='svn mv'
-alias sc='svn commit'
-alias srm='svn rm'
-alias sup='svn up'
-alias smkdir='svn mkdir'
-
 # vim stuff
 
 function vack() {
