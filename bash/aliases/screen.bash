@@ -1,4 +1,6 @@
 alias sls='screen -ls'
+alias sS='screen -S'
+alias sr='screen -r'
  
 function screen_r_x() {
   screen -r $1 || screen -x $1
