@@ -1,20 +1,27 @@
 function! AutotestBuffer()
 python << EOF
 from vim import *
+from threading import *
+import time
 
 command(":botright new")
+command(":edit log/autotest.log")
 
 autotest = None
 for b in buffers:
   if b.name == "log/autotest.log":
     autotest = b 
 
-if autotest == None:
-  command(":edit log/autotest.log")
-  command(":map r :edit<CR>G")
-else:
-  command(":buffer %s" % autotest.name)
-  command(":checktime")
+def checkAutotest():
+  while True:
+    if current.buffer != autotest:
+      pass
+    else:
+      current.buffer.append("asdf")
+      time.sleep(1)
+
+thread = Thread(target=checkAutotest)
+thread.start()
 
 EOF
 endfunction
