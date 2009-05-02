@@ -5,8 +5,9 @@ function! Scratch(...)
   " makes first argument optional, defaults to "new"
   let l:command = (a:0 >= 1 ? a:1 : "")
   let l:splitMode = (a:0 >= 2 ? a:2 : "new")
+  let l:splitStyle = (a:0 >= 3 ? a:3 : "botright")
 
-  execute ":botright " . l:splitMode
+  execute ":" . l:splitStyle . " " . l:splitMode
   execute ":set ft=text"
   execute ":set buftype=nofile"
 
@@ -32,8 +33,9 @@ command -nargs=+ ScratchDiff :call ScratchDiff(<args>)
 function! ScratchFind(...)
   let l:command = (a:0 >= 1 ? a:1 : g:scratch_find_command)
   let l:splitMode = (a:0 >= 2  ? a:2 : "new")
+  let l:splitStyle = (a:0 >= 3 ? a:3 : "botright")
 
-  Scratch l:command, l:splitMode
+  Scratch l:command, l:splitMode, l:splitStyle
   nmap <buffer> <CR> gf
   nmap <buffer> <ESC><CR> <c-w>f<c-w>w
 endfunction
@@ -45,6 +47,7 @@ let g:scratch_find_command = "find . -name .git -prune -o -name .hg -prune -o -n
 
 " textmate-like command-t
 nnoremap <ESC>t :ScratchFind<CR>
+nnoremap <ESC>v :ScratchFind g:scratch_find_command, "new", "vertical"<CR>
+nnoremap <ESC>s :ScratchFind g:scratch_find_command, "new", "rightbelow"<CR>
 
-nnoremap <ESC>s :Scratch
 
