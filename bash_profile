@@ -7,11 +7,13 @@ shopt -s histappend
 export TERM=xterm-256color
 
 # EC2
-export EC2_INSTALLATION=giraffesoft
+export EC2_INSTALLATION=fetlife
 export EC2_CERT_PATH=~/.ec2/$EC2_INSTALLATION
 export EC2_HOME=/usr/local/ec2-api-tools
 export EC2_PRIVATE_KEY=$EC2_CERT_PATH/PrivateKey.pem
 export EC2_CERT=$EC2_CERT_PATH/509Cert.pem
+export AWS_ACCESS_KEY=`cat $EC2_CERT_PATH/access_key`
+export AWS_SECRET_ACCESS_KEY=`cat $EC2_CERT_PATH/secret_access_key`
 export EDITOR='vim'
 export CLICOLOR=1
 alias e=vim
