@@ -17,6 +17,11 @@ set sw=2
 set autoindent
 set smarttab
 set number
+
+augroup mkd
+  autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:>
+augroup END
+
 imap <C-l> <space>=><space>
 
 map <leader>t :FuzzyFinderTextMate<CR>
