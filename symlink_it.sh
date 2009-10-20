@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # 
 # "borrowed" from Jonathan Palardy (http://github.com/jpalardy/etc_config/tree/master)
  
