@@ -63,6 +63,9 @@ shopt -s hostcomplete
 shopt -s no_empty_cmd_completion
 shopt -s cmdhist
 
+# fuck that you have new mail shit (from rtomayko's dotfiles)
+unset MAILCHECK
+
 ##
 # Your previous /Users/james/.bash_profile file was backed up as /Users/james/.bash_profile.macports-saved_2009-08-31_at_14:31:23
 ##
