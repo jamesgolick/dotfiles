@@ -46,8 +46,9 @@ endif
 " Map \r to run current file with ruby, and \rf to run test by current word
 nmap <leader>r :!ruby %<CR>
 nmap <leader>rs :Scratch 'ruby ' . expand('%')<CR>
-nmap <leader>rf :Execruby expand('%') . " --name='/" . RubyShouldName() . "/'"<CR>
-nmap <leader>rc :Execruby expand('%') . " --name='/" . RubyContextName() . "/'"<CR>
+nmap <leader>ra :RunAllRubyTests<CR>
+nmap <leader>rc :RunRubyFocusedContext<CR>
+nmap <leader>rf :RunRubyFocusedUnitTest<CR>
 
 " Make a new line, and then jump back to ctrl mode
 nmap <leader>o o<Esc>
@@ -84,6 +85,7 @@ map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 set wildmenu
 set incsearch
 set hls
+set ruler
 
 map ; :nohlsearch<CR>
 
