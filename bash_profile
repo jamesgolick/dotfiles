@@ -3,7 +3,6 @@ export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK
 export CDPATH=.:~:~/Documents:~/Documents/railsApps:/Library/Ruby/Gems/1.8/gems/
 export HISTIGNORE="&:mutt:[bf]g:exit"
 export HISTSIZE=10000
-shopt -s histappend
 export TERM=xterm-color
 
 # EC2
@@ -56,6 +55,13 @@ _gemdocomplete() {
 
 complete -o default -o nospace -F _gemdocomplete gemdoc
 
+# set some options
+shopt -s histappend
+shopt -s extglob
+shopt -s cdspell
+shopt -s hostcomplete
+shopt -s no_empty_cmd_completion
+shopt -s cmdhist
 
 ##
 # Your previous /Users/james/.bash_profile file was backed up as /Users/james/.bash_profile.macports-saved_2009-08-31_at_14:31:23
