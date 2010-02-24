@@ -68,11 +68,6 @@ nmap N Nzz
 nmap * *Nzz
 nmap # #nzz
 
-" align plugin stuff
-call Align#AlignCtrl('=p1P0')
-nmap <leader>a :Align : =><CR>
-vmap <leader>a :Align : =><CR>
-
 " window splitting mappings
 nmap <leader>v :vsplit<CR> <C-w><C-w>
 nmap <leader>s :split<CR> <C-w><C-w>
