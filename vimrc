@@ -11,6 +11,10 @@ augroup myfiletypes
   autocmd BufNewFile,BufRead *.json_builder setf ruby
   autocmd BufNewFile,BufRead *.red setf ruby
 augroup END
+
+au BufRead,BufNewFile *.thrift set filetype=thrift
+au! Syntax thrift source ~/.vim/thrift.vim
+
 set ai
 set sts=2
 set sw=2
