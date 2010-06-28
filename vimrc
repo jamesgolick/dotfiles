@@ -101,3 +101,33 @@ map H ^
 let &t_SI = "\<Esc>]14;purple\x7"
 let &t_EI = "\<Esc>]12;blue\x7"
 
+" 
+" mappings for tabular
+"
+
+"
+" align string arguments
+"
+" i.e. 
+"   gem "foo", "bar"
+"   gem "foobar", "baz"
+"
+" becomes:
+"   gem "foo",    "bar"
+"   gem "foobar", "baz"
+"
+map <leader>asa :Tab/\w\+ "[^"]*",/l0l1<CR>
+
+" 
+" align symbols
+"
+" i.e.
+"   gem "foo", :source => "http://gems.github.com"
+"   gem "foobar", :source => "http://gems.github.com"
+"
+" becomes:
+"
+"   gem "foo",     :source => "http://gems.github.com"
+"   gem "foobar",  :source => "http://gems.github.com"
+"
+map <leader>asy :Tab/ \:\w*/l1<CR>
