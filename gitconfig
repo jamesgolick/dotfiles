@@ -1,18 +1,18 @@
 [user]
-	name = James Golick
-	email = james@giraffesoft.ca
+  name = James Golick
+  email = jamesgolick@gmail.com
 [alias]
-	co = checkout
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  co = checkout
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [apply]
-	whitespace = nowarn
+  whitespace = nowarn
 [core]
-	excludesfile = /Users/james/.gitignore
+  excludesfile = /Users/james/.gitignore
 [color]
   branch = auto
   diff = auto
   status = auto
-	ui = auto
+  ui = auto
 [color "branch"]
   current = yellow reverse
   local = yellow
@@ -27,5 +27,5 @@
   changed = green
   untracked = cyan
 [github]
-  user = giraffesoft
+  user = jamesgolick
   token = dbfb6db7ec9c484f80477dad6d424591
