@@ -48,8 +48,6 @@ export -f ftf
 source ~/.bash/completion/git-completion.bash
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
-export GEMDIR=`gem env gemdir`
-
 gemdoc() {
   open $GEMDIR/doc/`$(which ls) $GEMDIR/doc | grep $1 | sort | tail -1`/rdoc/index.html
 }
@@ -83,3 +81,5 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 # rvm installer added line:
 if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
+
+export GEMDIR=`gem env gemdir`
