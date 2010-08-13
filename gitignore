@@ -1,4 +1,2 @@
-log/[^.]*
-tmp/[^.]*
-*.swp
+[^.]*.swp
 TAGS
