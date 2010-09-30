@@ -1,4 +1,11 @@
-if [ ! $(hostname | grep -q 'dal.fetlife') ]; then
+if hostname | grep -q 'dal.fetlife'; then
+  LOCATION="fetlife"
+else
+  LOCATION="home"
+fi
+
+
+if [ LOCATION = "home" ]; then
   export PATH=~/bin:/usr/local/git/bin:~/script:/usr/local/bin:/usr/local/mysql/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH:/usr/local/jruby/bin:/usr/local/ec2-api-tools/bin:/usr/local/screenwm-1.0:/usr/local/jruby/bin:~
   export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 fi
