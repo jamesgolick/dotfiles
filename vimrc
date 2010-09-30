@@ -131,3 +131,9 @@ map <leader>asa :Tab/\w\+ "[^"]*",/l0l1<CR>
 "   gem "foobar",  :source => "http://gems.github.com"
 "
 map <leader>asy :Tab/ \:\w*/l1<CR>
+
+" swap files are just a fucking pain in the ass
+"
+set nobackup
+set nowritebackup
+set noswapfile
