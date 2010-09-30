@@ -1,5 +1,8 @@
-export PATH=~/bin:/usr/local/git/bin:~/script:/usr/local/bin:/usr/local/mysql/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH:/usr/local/jruby/bin:/usr/local/ec2-api-tools/bin:/usr/local/screenwm-1.0:/usr/local/jruby/bin:~
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
+if [ ! $(hostname | grep -q 'dal.fetlife') ]; then
+  export PATH=~/bin:/usr/local/git/bin:~/script:/usr/local/bin:/usr/local/mysql/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH:/usr/local/jruby/bin:/usr/local/ec2-api-tools/bin:/usr/local/screenwm-1.0:/usr/local/jruby/bin:~
+  export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
+fi
+
 export CDPATH=.:~:~/Documents:~/Documents/railsApps:/Library/Ruby/Gems/1.8/gems/
 export HISTIGNORE="&:mutt:[bf]g:exit"
 export HISTSIZE=10000
