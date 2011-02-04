@@ -4,16 +4,15 @@ else
   LOCATION="home"
 fi
 
-
 if [ LOCATION = "home" ]; then
-  export PATH=~/bin:/usr/local/git/bin:~/script:/usr/local/bin:/usr/local/mysql/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH:/usr/local/jruby/bin:/usr/local/ec2-api-tools/bin:/usr/local/screenwm-1.0:/usr/local/jruby/bin:~
+  export PATH=/Users/jamesgolick/bin:/usr/local/git/bin:~/script:/usr/local/bin:/usr/local/mysql/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH:/usr/local/jruby/bin:/usr/local/ec2-api-tools/bin:/usr/local/screenwm-1.0:/usr/local/jruby/bin:~
   export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 fi
 
 export CDPATH=.:~:~/Documents:~/Documents/railsApps:/Library/Ruby/Gems/1.8/gems/
 export HISTIGNORE="&:mutt:[bf]g:exit"
 export HISTSIZE=10000
-export TERM=xterm-color
+export TERM=xterm-256color
 
 # EC2
 export EC2_INSTALLATION=fetlife
@@ -33,9 +32,10 @@ alias e=vim
 alias ka='killall -9'
 
 # ruby gc settings
-export RUBY_HEAP_MIN_SLOTS=500000
+export RUBY_HEAP_MIN_SLOTS=1250000
+export RUBY_HEAP_FREE_MIN=12500
 export RUBY_HEAP_SLOTS_INCREMENT=250000
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+export RUBY_HEAP_SLOTS_GROWTH_FACTOR=2
 export RUBY_GC_MALLOC_LIMIT=500000000
 
 rp()
@@ -93,5 +93,8 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 # rvm installer added line:
 if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
+
+# I don't like colour in my backtraces. Yes, I said colour.
+RBX_NOCOLOR=1
 
 export GEMDIR=`gem env gemdir`
