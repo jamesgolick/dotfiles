@@ -132,6 +132,25 @@ map <leader>asa :Tab/\w\+ "[^"]*",/l0l1<CR>
 "
 map <leader>asy :Tab/ \:\w*/l1<CR>
 
+" 
+" align the last equal sign on a given line
+"
+" i.e.
+"    val picture = Picture(user_id=1,
+"                          filename="asdf",
+"                          file_extension = "asdf",
+"                          content_type = "asdf",
+"                          caption = "asdf")
+"
+" becomes:
+"    val picture = Picture(user_id        = 1,
+"                          filename       = "asdf",
+"                          file_extension = "asdf",
+"                          content_type   = "asdf",
+"                          caption        = "asdf")
+"
+map <leader>a= :Tabularize/=\(.*=\)\@!/<CR>
+
 " swap files are just a fucking pain in the ass
 "
 set nobackup
