@@ -100,3 +100,4 @@ RBX_NOCOLOR=1
 export GEMDIR=`gem env gemdir`
 
 export NODE_PATH=/usr/local/lib/node_modules
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
