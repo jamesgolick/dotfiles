@@ -43,7 +43,8 @@ command -nargs=* ScratchFind :call ScratchFind(<args>)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:scratch_find_command = "find . -name .git -prune -o -name .hg -prune -o -name *.swp -prune -o -type f -print \| sort"
+let g:scratch_find_command = "find . -name .git -prune -o -name .hg -prune -o -name *.swp -prune -o -name ebin -prune -o -name .eunit -prune -o -type f -print \| sort"
+
 
 " textmate-like command-t
 nnoremap <ESC>t :ScratchFind<CR>
