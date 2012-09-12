@@ -60,6 +60,10 @@ nmap <leader>o o<Esc>
 " Activate yaml plugin on .yaml or .yml
 au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/plugin/yaml.vim
 
+" Activate rails.vim on mobile.erb
+autocmd BufNewFile,BufRead *.mobile.erb let b:eruby_subtype='html'
+autocmd BufNewFile,BufRead *.mobile.erb set filetype=eruby
+
 " Make it way easier to switch windows (<leader>w)
 nmap <leader>w <C-w><C-w>_
 
@@ -79,7 +83,12 @@ nmap <leader>s :split<CR> <C-w><C-w>
 " nerd tree
 map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 
-:colorscheme vividchalk 
+" Color scheme customization
+" 
+colorscheme grb256
+hi clear CursorLine
+hi CursorLine ctermbg=236
+set cursorline
 
 set wildmenu
 set incsearch
@@ -131,6 +140,7 @@ map <leader>asa :Tab/\w\+ "[^"]*",/l0l1<CR>
 "   gem "foobar",  :source => "http://gems.github.com"
 "
 map <leader>asy :Tab/ \:\w*/l1<CR>
+map <leader>aq :Tab/ \(\:\|"\)\w*/l1<CR>
 
 " 
 " align the last equal sign on a given line
@@ -150,9 +160,19 @@ map <leader>asy :Tab/ \:\w*/l1<CR>
 "                          caption        = "asdf")
 "
 map <leader>a= :Tabularize/=\(.*=\)\@!/<CR>
+map <leader>ah :Tabularize/=>\(.*=>\)\@!/<CR>
 
 " swap files are just a fucking pain in the ass
 "
 set nobackup
 set nowritebackup
 set noswapfile
+
+" add ctrlp.vim
+"
+set runtimepath^=~/.vim/external/ctrlp.vim
+
+" vimerl config
+"
+let g:erlangManPath="/usr/local/share/man/man3"
+let g:erlangCompletionDisplayDoc=0
