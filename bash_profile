@@ -92,7 +92,7 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 
 # rvm installer added line:
-if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
+#if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
 
 # I don't like colour in my backtraces. Yes, I said colour.
 RBX_NOCOLOR=1
@@ -101,3 +101,6 @@ export GEMDIR=`gem env gemdir`
 
 export NODE_PATH=/usr/local/lib/node_modules
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
+
+export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
