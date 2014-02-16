@@ -1,3 +1,4 @@
+execute pathogen#infect()
 autocmd BufRead,BufNewFile *.py on 
 autocmd BufRead,BufNewFile *.py set ai
 :syntax on
@@ -159,6 +160,7 @@ map <leader>aq :Tab/ \(\:\|"\)\w*/l1<CR>
 "                          content_type   = "asdf",
 "                          caption        = "asdf")
 "
+map <leader>a= :Tabularize/=\(.*=\)\@!/<CR>
 map <leader>a= :Tabularize/=\(.*=\)\@!/<CR>
 map <leader>ah :Tabularize/=>\(.*=>\)\@!/<CR>
 
